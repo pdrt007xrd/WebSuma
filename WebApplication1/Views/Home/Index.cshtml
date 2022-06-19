@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Suma
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>Web App SUMA</title>
+</head>
+<body>
+
+<h2>TEST DE SUMA</h2>
+<form method="post">
+    <input asp-for="Numero1" >
+    <span>+</span>
+    <input asp-for="Numero2" >
+    <span>-</span>
+   <input asp-for="Resultado" readonly> 
+    <br/>
+    <br/>
+    <input type="submit" value="Calcular" />
+    
+    <span>@ViewBag.Resultado</span>
+</form>
+</body>
+</html>

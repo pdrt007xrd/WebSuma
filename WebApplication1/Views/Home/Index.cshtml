@@ -8,19 +8,19 @@
 <html lang="es">
 <head>
     <title>Web App SUMA</title>
+    <link rel="stylesheet" href="/lib/css/bootstrap/bootstrap.min.css">
 </head>
 <body>
 
 <h2>TEST DE SUMA</h2>
-<form method="post">
-    <input asp-for="Numero1" >
-    <span>+</span>
-    <input asp-for="Numero2" >
-    <span>-</span>
-   <input asp-for="Resultado" readonly> 
-    <br/>
-    <br/>
-    <input type="submit" value="Calcular" />
+<form action="" method="post" autocomplete="off">
+     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="text" class="form-control" asp-for="Numero1" placeholder="Ingrese Un Numero!" > <br>
+    <span asp-validation-for="Numero1" class="text-danger"></span>
+    <input type="text" class="form-control" asp-for="Numero2" placeholder="Ingrese Otro Numero!" ><br><br>
+    <span asp-validation-for="Numero2" class="text-danger"></span>
+    <input type="button" value="Calcular">
+</form>
     
     <span>@ViewBag.Resultado</span>
 </form>

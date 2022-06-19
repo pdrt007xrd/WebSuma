@@ -4,9 +4,9 @@ namespace WebApplication1.Models;
 
 public class Suma
 {
-    [Required]
+    [Required(ErrorMessage = "Campo Requerido!")]
     public int Numero1 { get; set; }
-    [Required]
+    [Required(ErrorMessage = "Campo Requerido!")]
     public int Numero2 { get; set; }
     [Editable(false)]
     public int Resultado { get; set; }
